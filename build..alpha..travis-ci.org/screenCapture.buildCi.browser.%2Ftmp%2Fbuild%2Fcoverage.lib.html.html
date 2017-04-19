@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-cron/cron/lib/cron.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-cron/node_modules/cron/lib/cron.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,9 +190,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-cron">npmtest-cron (v0.0.2)</a>
+        <a href="https://github.com/npmtest/node-npmtest-cron">npmtest-cron (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-cron/cron/lib/cron.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-cron/node_modules/cron/lib/cron.js</span></h1>
     <h2>
         
         Statements: <span class="metric">12.5% <small>(33 / 264)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-cron/cron/lib/</a> &#187; cron.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-cron/node_modules/cron/lib/</a> » cron.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1297,12 +1295,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function (root, factory) {
-	<span class="missing-if-branch" title="if path not taken" >I</span>if (typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >define.amd)</span> {
-<span class="cstat-no" title="statement not covered" >		define(['moment-timezone'], factory);</span>
-	} else <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof exports === 'object') {
+	<span class="missing-if-branch" title="if path not taken">I</span>if (typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">define.amd)</span> {
+<span class="cstat-no" title="statement not covered">		define(['moment-timezone'], factory);</span>
+	} else <span class="missing-if-branch" title="else path not taken">E</span>if (typeof exports === 'object') {
 		module.exports = factory(require('moment-timezone'), require('child_process'));
 	} else {
-<span class="cstat-no" title="statement not covered" >		root.Cron = factory(root.moment);</span>
+<span class="cstat-no" title="statement not covered">		root.Cron = factory(root.moment);</span>
 	}
 }(this, function (moment, child_process) {
 &nbsp;
@@ -1310,28 +1308,28 @@ var exports = {},
 		timeUnits = ['second', 'minute', 'hour', 'dayOfMonth', 'month', 'dayOfWeek'],
 		spawn = child_process &amp;&amp; child_process.spawn;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function CronTime(source, zone) {</span>
-<span class="cstat-no" title="statement not covered" >	this.source = source;</span>
+<span class="fstat-no" title="function not covered">function CronTime(source, zone) {</span>
+<span class="cstat-no" title="statement not covered">	this.source = source;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (zone) {</span>
-<span class="cstat-no" title="statement not covered" >		if (moment.tz.names().indexOf(zone) === -1) {</span>
-<span class="cstat-no" title="statement not covered" >			throw new Error('Invalid timezone.');</span>
+<span class="cstat-no" title="statement not covered">	if (zone) {</span>
+<span class="cstat-no" title="statement not covered">		if (moment.tz.names().indexOf(zone) === -1) {</span>
+<span class="cstat-no" title="statement not covered">			throw new Error('Invalid timezone.');</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		this.zone = zone;</span>
+<span class="cstat-no" title="statement not covered">		this.zone = zone;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var that = this;</span>
-<span class="cstat-no" title="statement not covered" >	timeUnits.map(<span class="fstat-no" title="function not covered" >function(timeUnit){</span></span>
-<span class="cstat-no" title="statement not covered" >		that[timeUnit] = {};</span>
+<span class="cstat-no" title="statement not covered">	var that = this;</span>
+<span class="cstat-no" title="statement not covered">	timeUnits.map(<span class="fstat-no" title="function not covered">function(timeUnit){</span></span>
+<span class="cstat-no" title="statement not covered">		that[timeUnit] = {};</span>
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (this.source instanceof Date) {</span>
-<span class="cstat-no" title="statement not covered" >		this.source = moment(this.source);</span>
-<span class="cstat-no" title="statement not covered" >		this.realDate = true;</span>
+<span class="cstat-no" title="statement not covered">	if (this.source instanceof Date) {</span>
+<span class="cstat-no" title="statement not covered">		this.source = moment(this.source);</span>
+<span class="cstat-no" title="statement not covered">		this.realDate = true;</span>
 	} else {
-<span class="cstat-no" title="statement not covered" >		this._parse();</span>
-<span class="cstat-no" title="statement not covered" >		this._verifyParse();</span>
+<span class="cstat-no" title="statement not covered">		this._parse();</span>
+<span class="cstat-no" title="statement not covered">		this._verifyParse();</span>
 	}
 }
 &nbsp;
@@ -1382,21 +1380,21 @@ CronTime.constraints = [
 &nbsp;
 &nbsp;
 CronTime.prototype = {
-	_verifyParse: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >		var months = Object.keys(this.month);</span>
-<span class="cstat-no" title="statement not covered" >		for (var i = 0; i &lt; months.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >			var m = months[i];</span>
-<span class="cstat-no" title="statement not covered" >			var con = CronTime.monthConstraints[parseInt(m, 10)];</span>
-<span class="cstat-no" title="statement not covered" >			var ok = false;</span>
-<span class="cstat-no" title="statement not covered" >			var dsom = Object.keys(this.dayOfMonth);</span>
-<span class="cstat-no" title="statement not covered" >			for (var j = 0; j &lt; dsom.length; j++) {</span>
-<span class="cstat-no" title="statement not covered" >				var dom = dsom[j];</span>
-<span class="cstat-no" title="statement not covered" >				if (dom &lt;= con)</span>
-<span class="cstat-no" title="statement not covered" >					ok = true;</span>
+	_verifyParse: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">		var months = Object.keys(this.month);</span>
+<span class="cstat-no" title="statement not covered">		for (var i = 0; i &lt; months.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">			var m = months[i];</span>
+<span class="cstat-no" title="statement not covered">			var con = CronTime.monthConstraints[parseInt(m, 10)];</span>
+<span class="cstat-no" title="statement not covered">			var ok = false;</span>
+<span class="cstat-no" title="statement not covered">			var dsom = Object.keys(this.dayOfMonth);</span>
+<span class="cstat-no" title="statement not covered">			for (var j = 0; j &lt; dsom.length; j++) {</span>
+<span class="cstat-no" title="statement not covered">				var dom = dsom[j];</span>
+<span class="cstat-no" title="statement not covered">				if (dom &lt;= con)</span>
+<span class="cstat-no" title="statement not covered">					ok = true;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!ok) {</span>
-<span class="cstat-no" title="statement not covered" >				console.warn('Month \'' + m + '\' is limited to \'' + con + '\' days.');</span>
+<span class="cstat-no" title="statement not covered">			if (!ok) {</span>
+<span class="cstat-no" title="statement not covered">				console.warn('Month \'' + m + '\' is limited to \'' + con + '\' days.');</span>
 			}
 		}
 	},
@@ -1404,351 +1402,351 @@ CronTime.prototype = {
 	/**
 	 * calculates the next send time
 	 */
-	sendAt: <span class="fstat-no" title="function not covered" >function(i) {</span>
-<span class="cstat-no" title="statement not covered" >		var date = this.realDate ? this.source : moment();</span>
+	sendAt: <span class="fstat-no" title="function not covered">function(i) {</span>
+<span class="cstat-no" title="statement not covered">		var date = this.realDate ? this.source : moment();</span>
 		// Set the timezone if given (http://momentjs.com/timezone/docs/#/using-timezones/parsing-in-zone/)
-<span class="cstat-no" title="statement not covered" >		if (this.zone)</span>
-<span class="cstat-no" title="statement not covered" >			date = date.tz(this.zone);</span>
+<span class="cstat-no" title="statement not covered">		if (this.zone)</span>
+<span class="cstat-no" title="statement not covered">			date = date.tz(this.zone);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (this.realDate)</span>
-<span class="cstat-no" title="statement not covered" >			return date;</span>
+<span class="cstat-no" title="statement not covered">		if (this.realDate)</span>
+<span class="cstat-no" title="statement not covered">			return date;</span>
 &nbsp;
 		//add 1 second so next time isn't now (can cause timeout to be 0 or negative number)
-<span class="cstat-no" title="statement not covered" >		var now = new Date();</span>
-<span class="cstat-no" title="statement not covered" >		var targetSecond = date.seconds();</span>
-<span class="cstat-no" title="statement not covered" >		var diff = Math.abs(targetSecond - now.getSeconds())</span>
+<span class="cstat-no" title="statement not covered">		var now = new Date();</span>
+<span class="cstat-no" title="statement not covered">		var targetSecond = date.seconds();</span>
+<span class="cstat-no" title="statement not covered">		var diff = Math.abs(targetSecond - now.getSeconds())</span>
 		// there was a problem when `date` is 1424777177999 and `now` is 1424777178000
 		// 1 ms diff but this is another second...
-<span class="cstat-no" title="statement not covered" >		if ( diff == 0 || (diff == 1 &amp;&amp; now.getMilliseconds() &lt;= date.milliseconds() ) ) {</span>
+<span class="cstat-no" title="statement not covered">		if ( diff == 0 || (diff == 1 &amp;&amp; now.getMilliseconds() &lt;= date.milliseconds() ) ) {</span>
 			//console.log('add 1 second?');
-<span class="cstat-no" title="statement not covered" >			date = date.add(1, 's');</span>
+<span class="cstat-no" title="statement not covered">			date = date.add(1, 's');</span>
 		}
 &nbsp;
 		//If the i argument is not given, return the next send time
-<span class="cstat-no" title="statement not covered" >		if(isNaN(i) || i &lt; 0){</span>
-<span class="cstat-no" title="statement not covered" >			date = this._getNextDateFrom(date);</span>
-<span class="cstat-no" title="statement not covered" >			return date;</span>
+<span class="cstat-no" title="statement not covered">		if(isNaN(i) || i &lt; 0){</span>
+<span class="cstat-no" title="statement not covered">			date = this._getNextDateFrom(date);</span>
+<span class="cstat-no" title="statement not covered">			return date;</span>
 		}
 		//Else return the next i send times
 		else{
-<span class="cstat-no" title="statement not covered" >			var dates = [];</span>
-<span class="cstat-no" title="statement not covered" >			for(;i&gt;0;i--){</span>
-<span class="cstat-no" title="statement not covered" >				date = this._getNextDateFrom(date);</span>
-<span class="cstat-no" title="statement not covered" >				dates.push(moment(date));</span>
-<span class="cstat-no" title="statement not covered" >				if(i&gt;1) <span class="cstat-no" title="statement not covered" >date.add(1,'s');</span></span>
+<span class="cstat-no" title="statement not covered">			var dates = [];</span>
+<span class="cstat-no" title="statement not covered">			for(;i&gt;0;i--){</span>
+<span class="cstat-no" title="statement not covered">				date = this._getNextDateFrom(date);</span>
+<span class="cstat-no" title="statement not covered">				dates.push(moment(date));</span>
+<span class="cstat-no" title="statement not covered">				if(i&gt;1) <span class="cstat-no" title="statement not covered">date.add(1,'s');</span></span>
 			}
-<span class="cstat-no" title="statement not covered" >			return dates;</span>
+<span class="cstat-no" title="statement not covered">			return dates;</span>
 		}
 	},
 &nbsp;
 	/**
 	 * Get the number of milliseconds in the future at which to fire our callbacks.
 	 */
-	getTimeout: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >		return Math.max(-1, this.sendAt() - moment());</span>
+	getTimeout: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">		return Math.max(-1, this.sendAt() - moment());</span>
 	},
 &nbsp;
 	/**
 	 * writes out a cron string
 	 */
-	toString: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >		return this.toJSON().join(' ');</span>
+	toString: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">		return this.toJSON().join(' ');</span>
 	},
 &nbsp;
 	/**
 	 * Json representation of the parsed cron syntax.
 	 */
-	toJSON: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >		var self = this;</span>
-<span class="cstat-no" title="statement not covered" >		return timeUnits.map(<span class="fstat-no" title="function not covered" >function(timeName){</span></span>
-<span class="cstat-no" title="statement not covered" >			return self._wcOrAll(timeName);</span>
+	toJSON: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">		var self = this;</span>
+<span class="cstat-no" title="statement not covered">		return timeUnits.map(<span class="fstat-no" title="function not covered">function(timeName){</span></span>
+<span class="cstat-no" title="statement not covered">			return self._wcOrAll(timeName);</span>
 		});
 	},
 &nbsp;
 	/**
 	 * get next date that matches parsed cron time
 	 */
-	_getNextDateFrom: <span class="fstat-no" title="function not covered" >function(start) {</span>
-<span class="cstat-no" title="statement not covered" >		var date = moment(start);</span>
-<span class="cstat-no" title="statement not covered" >		if (date.toString() == 'Invalid date') {</span>
-<span class="cstat-no" title="statement not covered" >			console.log('ERROR: You specified an invalid date.');</span>
-<span class="cstat-no" title="statement not covered" >			return date;</span>
+	_getNextDateFrom: <span class="fstat-no" title="function not covered">function(start) {</span>
+<span class="cstat-no" title="statement not covered">		var date = moment(start);</span>
+<span class="cstat-no" title="statement not covered">		if (date.toString() == 'Invalid date') {</span>
+<span class="cstat-no" title="statement not covered">			console.log('ERROR: You specified an invalid date.');</span>
+<span class="cstat-no" title="statement not covered">			return date;</span>
 		}
-<span class="cstat-no" title="statement not covered" >		if (this.realDate &amp;&amp; start &lt; new Date())</span>
-<span class="cstat-no" title="statement not covered" >			console.log('WARNING: Date in past. Will never be fired.');</span>
-<span class="cstat-no" title="statement not covered" >		if (this.realDate) <span class="cstat-no" title="statement not covered" >return date;</span></span>
+<span class="cstat-no" title="statement not covered">		if (this.realDate &amp;&amp; start &lt; new Date())</span>
+<span class="cstat-no" title="statement not covered">			console.log('WARNING: Date in past. Will never be fired.');</span>
+<span class="cstat-no" title="statement not covered">		if (this.realDate) <span class="cstat-no" title="statement not covered">return date;</span></span>
 &nbsp;
 		//sanity check
-<span class="cstat-no" title="statement not covered" >		while (true) {</span>
-<span class="cstat-no" title="statement not covered" >			var diff = date - start,</span>
+<span class="cstat-no" title="statement not covered">		while (true) {</span>
+<span class="cstat-no" title="statement not covered">			var diff = date - start,</span>
 				origDate = new Date(date);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!(date.month() in this.month)) {</span>
-<span class="cstat-no" title="statement not covered" >				date.add(1, 'M');</span>
-<span class="cstat-no" title="statement not covered" >				date.date(1);</span>
-<span class="cstat-no" title="statement not covered" >				date.hours(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.minutes(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.seconds(0);</span>
-<span class="cstat-no" title="statement not covered" >				continue;</span>
+<span class="cstat-no" title="statement not covered">			if (!(date.month() in this.month)) {</span>
+<span class="cstat-no" title="statement not covered">				date.add(1, 'M');</span>
+<span class="cstat-no" title="statement not covered">				date.date(1);</span>
+<span class="cstat-no" title="statement not covered">				date.hours(0);</span>
+<span class="cstat-no" title="statement not covered">				date.minutes(0);</span>
+<span class="cstat-no" title="statement not covered">				date.seconds(0);</span>
+<span class="cstat-no" title="statement not covered">				continue;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!(date.date() in this.dayOfMonth)) {</span>
-<span class="cstat-no" title="statement not covered" >				date.add(1, 'd');</span>
-<span class="cstat-no" title="statement not covered" >				date.hours(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.minutes(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.seconds(0);</span>
-<span class="cstat-no" title="statement not covered" >				continue;</span>
+<span class="cstat-no" title="statement not covered">			if (!(date.date() in this.dayOfMonth)) {</span>
+<span class="cstat-no" title="statement not covered">				date.add(1, 'd');</span>
+<span class="cstat-no" title="statement not covered">				date.hours(0);</span>
+<span class="cstat-no" title="statement not covered">				date.minutes(0);</span>
+<span class="cstat-no" title="statement not covered">				date.seconds(0);</span>
+<span class="cstat-no" title="statement not covered">				continue;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!(date.day() in this.dayOfWeek)) {</span>
-<span class="cstat-no" title="statement not covered" >				date.add(1, 'd');</span>
-<span class="cstat-no" title="statement not covered" >				date.hours(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.minutes(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.seconds(0);</span>
-<span class="cstat-no" title="statement not covered" >				if (date &lt;= origDate) {</span>
-<span class="cstat-no" title="statement not covered" >					date = this._findDST(origDate);</span>
+<span class="cstat-no" title="statement not covered">			if (!(date.day() in this.dayOfWeek)) {</span>
+<span class="cstat-no" title="statement not covered">				date.add(1, 'd');</span>
+<span class="cstat-no" title="statement not covered">				date.hours(0);</span>
+<span class="cstat-no" title="statement not covered">				date.minutes(0);</span>
+<span class="cstat-no" title="statement not covered">				date.seconds(0);</span>
+<span class="cstat-no" title="statement not covered">				if (date &lt;= origDate) {</span>
+<span class="cstat-no" title="statement not covered">					date = this._findDST(origDate);</span>
 				}
-<span class="cstat-no" title="statement not covered" >				continue;</span>
+<span class="cstat-no" title="statement not covered">				continue;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!(date.hours() in this.hour)) {</span>
-<span class="cstat-no" title="statement not covered" >				origDate = moment(date);</span>
-<span class="cstat-no" title="statement not covered" >				date.hours(date.hours() == 23 &amp;&amp; diff &gt; 86400000 ? 0 : date.hours() + 1);</span>
-<span class="cstat-no" title="statement not covered" >				date.minutes(0);</span>
-<span class="cstat-no" title="statement not covered" >				date.seconds(0);</span>
-<span class="cstat-no" title="statement not covered" >				if (date &lt;= origDate) {</span>
-<span class="cstat-no" title="statement not covered" >					date = this._findDST(origDate);</span>
+<span class="cstat-no" title="statement not covered">			if (!(date.hours() in this.hour)) {</span>
+<span class="cstat-no" title="statement not covered">				origDate = moment(date);</span>
+<span class="cstat-no" title="statement not covered">				date.hours(date.hours() == 23 &amp;&amp; diff &gt; 86400000 ? 0 : date.hours() + 1);</span>
+<span class="cstat-no" title="statement not covered">				date.minutes(0);</span>
+<span class="cstat-no" title="statement not covered">				date.seconds(0);</span>
+<span class="cstat-no" title="statement not covered">				if (date &lt;= origDate) {</span>
+<span class="cstat-no" title="statement not covered">					date = this._findDST(origDate);</span>
 				}
-<span class="cstat-no" title="statement not covered" >				continue;</span>
+<span class="cstat-no" title="statement not covered">				continue;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!(date.minutes() in this.minute)) {</span>
-<span class="cstat-no" title="statement not covered" >				origDate = moment(date);</span>
-<span class="cstat-no" title="statement not covered" >				date.minutes(date.minutes() == 59 &amp;&amp; diff &gt; 60 * 60 * 1000 ? 0 : date.minutes() + 1);</span>
-<span class="cstat-no" title="statement not covered" >				date.seconds(0);</span>
-<span class="cstat-no" title="statement not covered" >				if (date &lt;= origDate) {</span>
-<span class="cstat-no" title="statement not covered" >					date = this._findDST(origDate);</span>
+<span class="cstat-no" title="statement not covered">			if (!(date.minutes() in this.minute)) {</span>
+<span class="cstat-no" title="statement not covered">				origDate = moment(date);</span>
+<span class="cstat-no" title="statement not covered">				date.minutes(date.minutes() == 59 &amp;&amp; diff &gt; 60 * 60 * 1000 ? 0 : date.minutes() + 1);</span>
+<span class="cstat-no" title="statement not covered">				date.seconds(0);</span>
+<span class="cstat-no" title="statement not covered">				if (date &lt;= origDate) {</span>
+<span class="cstat-no" title="statement not covered">					date = this._findDST(origDate);</span>
 				}
-<span class="cstat-no" title="statement not covered" >				continue;</span>
+<span class="cstat-no" title="statement not covered">				continue;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!(date.seconds() in this.second)) {</span>
-<span class="cstat-no" title="statement not covered" >				origDate = moment(date);</span>
-<span class="cstat-no" title="statement not covered" >				date.seconds(date.seconds() == 59 &amp;&amp; diff &gt; 60 * 1000 ? 0 : date.seconds() + 1);</span>
-<span class="cstat-no" title="statement not covered" >				if (date &lt;= origDate) {</span>
-<span class="cstat-no" title="statement not covered" >					date = this._findDST(origDate);</span>
+<span class="cstat-no" title="statement not covered">			if (!(date.seconds() in this.second)) {</span>
+<span class="cstat-no" title="statement not covered">				origDate = moment(date);</span>
+<span class="cstat-no" title="statement not covered">				date.seconds(date.seconds() == 59 &amp;&amp; diff &gt; 60 * 1000 ? 0 : date.seconds() + 1);</span>
+<span class="cstat-no" title="statement not covered">				if (date &lt;= origDate) {</span>
+<span class="cstat-no" title="statement not covered">					date = this._findDST(origDate);</span>
 				}
-<span class="cstat-no" title="statement not covered" >				continue;</span>
+<span class="cstat-no" title="statement not covered">				continue;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			break;</span>
+<span class="cstat-no" title="statement not covered">			break;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return date;</span>
+<span class="cstat-no" title="statement not covered">		return date;</span>
 	},
 &nbsp;
 	/**
 	 * get next date that is a valid DST date
 	 */
-	_findDST: <span class="fstat-no" title="function not covered" >function(date) {</span>
-<span class="cstat-no" title="statement not covered" >		var newDate = moment(date);</span>
-<span class="cstat-no" title="statement not covered" >		while (newDate &lt;= date)</span>
-<span class="cstat-no" title="statement not covered" >			newDate.add(1, 's');</span>
+	_findDST: <span class="fstat-no" title="function not covered">function(date) {</span>
+<span class="cstat-no" title="statement not covered">		var newDate = moment(date);</span>
+<span class="cstat-no" title="statement not covered">		while (newDate &lt;= date)</span>
+<span class="cstat-no" title="statement not covered">			newDate.add(1, 's');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return newDate;</span>
+<span class="cstat-no" title="statement not covered">		return newDate;</span>
 	},
 &nbsp;
 	/**
 	 * wildcard, or all params in array (for to string)
 	 */
-	_wcOrAll: <span class="fstat-no" title="function not covered" >function(type) {</span>
-<span class="cstat-no" title="statement not covered" >		if (this._hasAll(type)) <span class="cstat-no" title="statement not covered" >return '*';</span></span>
+	_wcOrAll: <span class="fstat-no" title="function not covered">function(type) {</span>
+<span class="cstat-no" title="statement not covered">		if (this._hasAll(type)) <span class="cstat-no" title="statement not covered">return '*';</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		var all = [];</span>
-<span class="cstat-no" title="statement not covered" >		for (var time in this[type]) {</span>
-<span class="cstat-no" title="statement not covered" >			all.push(time);</span>
+<span class="cstat-no" title="statement not covered">		var all = [];</span>
+<span class="cstat-no" title="statement not covered">		for (var time in this[type]) {</span>
+<span class="cstat-no" title="statement not covered">			all.push(time);</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return all.join(',');</span>
+<span class="cstat-no" title="statement not covered">		return all.join(',');</span>
 	},
 &nbsp;
-	_hasAll: <span class="fstat-no" title="function not covered" >function(type) {</span>
-<span class="cstat-no" title="statement not covered" >		var constrain = CronTime.constraints[timeUnits.indexOf(type)];</span>
+	_hasAll: <span class="fstat-no" title="function not covered">function(type) {</span>
+<span class="cstat-no" title="statement not covered">		var constrain = CronTime.constraints[timeUnits.indexOf(type)];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		for (var i = constrain[0], n = constrain[1]; i &lt; n; i++) {</span>
-<span class="cstat-no" title="statement not covered" >			if (!(i in this[type])) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">		for (var i = constrain[0], n = constrain[1]; i &lt; n; i++) {</span>
+<span class="cstat-no" title="statement not covered">			if (!(i in this[type])) <span class="cstat-no" title="statement not covered">return false;</span></span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return true;</span>
+<span class="cstat-no" title="statement not covered">		return true;</span>
 	},
 &nbsp;
 &nbsp;
-	_parse: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >		var aliases = CronTime.aliases,</span>
-		source = this.source.replace(/[a-z]{1,3}/ig, <span class="fstat-no" title="function not covered" >function(alias) {</span>
-<span class="cstat-no" title="statement not covered" >			alias = alias.toLowerCase();</span>
+	_parse: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">		var aliases = CronTime.aliases,</span>
+		source = this.source.replace(/[a-z]{1,3}/ig, <span class="fstat-no" title="function not covered">function(alias) {</span>
+<span class="cstat-no" title="statement not covered">			alias = alias.toLowerCase();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (alias in aliases) {</span>
-<span class="cstat-no" title="statement not covered" >				return aliases[alias];</span>
+<span class="cstat-no" title="statement not covered">			if (alias in aliases) {</span>
+<span class="cstat-no" title="statement not covered">				return aliases[alias];</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			throw new Error('Unknown alias: ' + alias);</span>
+<span class="cstat-no" title="statement not covered">			throw new Error('Unknown alias: ' + alias);</span>
 		}),
 		split = source.replace(/^\s\s*|\s\s*$/g, '').split(/\s+/),
 		cur, i = 0,
 		len = timeUnits.length;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		for (; i &lt; timeUnits.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">		for (; i &lt; timeUnits.length; i++) {</span>
 			// If the split source string doesn't contain all digits,
 			// assume defaults for first n missing digits.
 			// This adds support for 5-digit standard cron syntax
-<span class="cstat-no" title="statement not covered" >			cur = split[i - (len - split.length)] || CronTime.parseDefaults[i];</span>
-<span class="cstat-no" title="statement not covered" >			this._parseField(cur, timeUnits[i], CronTime.constraints[i]);</span>
+<span class="cstat-no" title="statement not covered">			cur = split[i - (len - split.length)] || CronTime.parseDefaults[i];</span>
+<span class="cstat-no" title="statement not covered">			this._parseField(cur, timeUnits[i], CronTime.constraints[i]);</span>
 		}
 	},
 &nbsp;
-	_parseField: <span class="fstat-no" title="function not covered" >function(field, type, constraints) {</span>
-<span class="cstat-no" title="statement not covered" >		var rangePattern = /^(\d+)(?:-(\d+))?(?:\/(\d+))?$/g,</span>
+	_parseField: <span class="fstat-no" title="function not covered">function(field, type, constraints) {</span>
+<span class="cstat-no" title="statement not covered">		var rangePattern = /^(\d+)(?:-(\d+))?(?:\/(\d+))?$/g,</span>
 		typeObj = this[type],
 		pointer,
 		low = constraints[0],
 		high = constraints[1];
 &nbsp;
 		// * is a shortcut to [lower-upper] range
-<span class="cstat-no" title="statement not covered" >		field = field.replace(/\*/g, low + '-' + high);</span>
+<span class="cstat-no" title="statement not covered">		field = field.replace(/\*/g, low + '-' + high);</span>
 &nbsp;
 		//commas separate information, so split based on those
-<span class="cstat-no" title="statement not covered" >		var allRanges = field.split(',');</span>
+<span class="cstat-no" title="statement not covered">		var allRanges = field.split(',');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		for (var i = 0; i &lt; allRanges.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >			if (allRanges[i].match(rangePattern)) {</span>
-<span class="cstat-no" title="statement not covered" >				allRanges[i].replace(rangePattern, <span class="fstat-no" title="function not covered" >function($0, lower, upper, step) {</span></span>
-<span class="cstat-no" title="statement not covered" >					step = parseInt(step) || 1;</span>
+<span class="cstat-no" title="statement not covered">		for (var i = 0; i &lt; allRanges.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">			if (allRanges[i].match(rangePattern)) {</span>
+<span class="cstat-no" title="statement not covered">				allRanges[i].replace(rangePattern, <span class="fstat-no" title="function not covered">function($0, lower, upper, step) {</span></span>
+<span class="cstat-no" title="statement not covered">					step = parseInt(step) || 1;</span>
 					// Positive integer higher than constraints[0]
-<span class="cstat-no" title="statement not covered" >					lower = Math.min(Math.max(low, ~~Math.abs(lower)), high);</span>
+<span class="cstat-no" title="statement not covered">					lower = Math.min(Math.max(low, ~~Math.abs(lower)), high);</span>
 &nbsp;
 					// Positive integer lower than constraints[1]
-<span class="cstat-no" title="statement not covered" >					upper = upper ? Math.min(high, ~~Math.abs(upper)) : lower;</span>
+<span class="cstat-no" title="statement not covered">					upper = upper ? Math.min(high, ~~Math.abs(upper)) : lower;</span>
 &nbsp;
 					// Count from the lower barrier to the upper
-<span class="cstat-no" title="statement not covered" >					pointer = lower;</span>
+<span class="cstat-no" title="statement not covered">					pointer = lower;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >					do {</span>
-<span class="cstat-no" title="statement not covered" >						typeObj[pointer] = true</span>
-<span class="cstat-no" title="statement not covered" >						pointer += step;</span>
+<span class="cstat-no" title="statement not covered">					do {</span>
+<span class="cstat-no" title="statement not covered">						typeObj[pointer] = true</span>
+<span class="cstat-no" title="statement not covered">						pointer += step;</span>
 					} while (pointer &lt;= upper);
 				});
 			} else {
-<span class="cstat-no" title="statement not covered" >				throw new Error('Field (' + field + ') cannot be parsed');</span>
+<span class="cstat-no" title="statement not covered">				throw new Error('Field (' + field + ') cannot be parsed');</span>
 			}
 		}
 	}
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function command2function(cmd) {</span>
-<span class="cstat-no" title="statement not covered" >	var command, args;</span>
-<span class="cstat-no" title="statement not covered" >	switch (typeof cmd) {</span>
+<span class="fstat-no" title="function not covered">function command2function(cmd) {</span>
+<span class="cstat-no" title="statement not covered">	var command, args;</span>
+<span class="cstat-no" title="statement not covered">	switch (typeof cmd) {</span>
 		case 'string':
-<span class="cstat-no" title="statement not covered" >			args = cmd.split(' ');</span>
-<span class="cstat-no" title="statement not covered" >			command = args.shift();</span>
+<span class="cstat-no" title="statement not covered">			args = cmd.split(' ');</span>
+<span class="cstat-no" title="statement not covered">			command = args.shift();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			cmd = spawn.bind(undefined, command, args);</span>
-<span class="cstat-no" title="statement not covered" >			break;</span>
+<span class="cstat-no" title="statement not covered">			cmd = spawn.bind(undefined, command, args);</span>
+<span class="cstat-no" title="statement not covered">			break;</span>
 		case 'object':
-<span class="cstat-no" title="statement not covered" >			command = cmd &amp;&amp; cmd.command;</span>
-<span class="cstat-no" title="statement not covered" >			if (command) {</span>
-<span class="cstat-no" title="statement not covered" >				args = cmd.args;</span>
-<span class="cstat-no" title="statement not covered" >				var options = cmd.options;</span>
+<span class="cstat-no" title="statement not covered">			command = cmd &amp;&amp; cmd.command;</span>
+<span class="cstat-no" title="statement not covered">			if (command) {</span>
+<span class="cstat-no" title="statement not covered">				args = cmd.args;</span>
+<span class="cstat-no" title="statement not covered">				var options = cmd.options;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				cmd = spawn.bind(undefined, command, args, options);</span>
+<span class="cstat-no" title="statement not covered">				cmd = spawn.bind(undefined, command, args, options);</span>
 			}
-<span class="cstat-no" title="statement not covered" >			break;</span>
+<span class="cstat-no" title="statement not covered">			break;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return cmd</span>
+<span class="cstat-no" title="statement not covered">	return cmd</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function CronJob(cronTime, onTick, onComplete, startNow, timeZone, context, runOnInit) {</span>
-<span class="cstat-no" title="statement not covered" >	var _cronTime = cronTime;</span>
-<span class="cstat-no" title="statement not covered" >	if (typeof cronTime != 'string' &amp;&amp; arguments.length == 1) {</span>
+<span class="fstat-no" title="function not covered">function CronJob(cronTime, onTick, onComplete, startNow, timeZone, context, runOnInit) {</span>
+<span class="cstat-no" title="statement not covered">	var _cronTime = cronTime;</span>
+<span class="cstat-no" title="statement not covered">	if (typeof cronTime != 'string' &amp;&amp; arguments.length == 1) {</span>
 		//crontime is an object...
-<span class="cstat-no" title="statement not covered" >		onTick = cronTime.onTick;</span>
-<span class="cstat-no" title="statement not covered" >		onComplete = cronTime.onComplete;</span>
-<span class="cstat-no" title="statement not covered" >		context = cronTime.context;</span>
-<span class="cstat-no" title="statement not covered" >		startNow = cronTime.start || cronTime.startNow || cronTime.startJob;</span>
-<span class="cstat-no" title="statement not covered" >		timeZone = cronTime.timeZone;</span>
-<span class="cstat-no" title="statement not covered" >		runOnInit = cronTime.runOnInit;</span>
-<span class="cstat-no" title="statement not covered" >		_cronTime = cronTime.cronTime;</span>
+<span class="cstat-no" title="statement not covered">		onTick = cronTime.onTick;</span>
+<span class="cstat-no" title="statement not covered">		onComplete = cronTime.onComplete;</span>
+<span class="cstat-no" title="statement not covered">		context = cronTime.context;</span>
+<span class="cstat-no" title="statement not covered">		startNow = cronTime.start || cronTime.startNow || cronTime.startJob;</span>
+<span class="cstat-no" title="statement not covered">		timeZone = cronTime.timeZone;</span>
+<span class="cstat-no" title="statement not covered">		runOnInit = cronTime.runOnInit;</span>
+<span class="cstat-no" title="statement not covered">		_cronTime = cronTime.cronTime;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	this.context = (context || this);</span>
-<span class="cstat-no" title="statement not covered" >	this._callbacks = [];</span>
-<span class="cstat-no" title="statement not covered" >	this.onComplete = command2function(onComplete);</span>
-<span class="cstat-no" title="statement not covered" >	this.cronTime = new CronTime(_cronTime, timeZone);</span>
+<span class="cstat-no" title="statement not covered">	this.context = (context || this);</span>
+<span class="cstat-no" title="statement not covered">	this._callbacks = [];</span>
+<span class="cstat-no" title="statement not covered">	this.onComplete = command2function(onComplete);</span>
+<span class="cstat-no" title="statement not covered">	this.cronTime = new CronTime(_cronTime, timeZone);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	addCallback.call(this, command2function(onTick));</span>
+<span class="cstat-no" title="statement not covered">	addCallback.call(this, command2function(onTick));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (runOnInit) <span class="cstat-no" title="statement not covered" >fireOnTick.call(this);</span></span>
-<span class="cstat-no" title="statement not covered" >	if (startNow) <span class="cstat-no" title="statement not covered" >start.call(this);</span></span>
+<span class="cstat-no" title="statement not covered">	if (runOnInit) <span class="cstat-no" title="statement not covered">fireOnTick.call(this);</span></span>
+<span class="cstat-no" title="statement not covered">	if (startNow) <span class="cstat-no" title="statement not covered">start.call(this);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return this;</span>
+<span class="cstat-no" title="statement not covered">	return this;</span>
 }
 &nbsp;
-var addCallback = <span class="fstat-no" title="function not covered" >function(callback) {</span>
-<span class="cstat-no" title="statement not covered" >	if (typeof callback == 'function') <span class="cstat-no" title="statement not covered" >this._callbacks.push(callback);</span></span>
+var addCallback = <span class="fstat-no" title="function not covered">function(callback) {</span>
+<span class="cstat-no" title="statement not covered">	if (typeof callback == 'function') <span class="cstat-no" title="statement not covered">this._callbacks.push(callback);</span></span>
 }
 CronJob.prototype.addCallback = addCallback;
 &nbsp;
-CronJob.prototype.setTime = <span class="fstat-no" title="function not covered" >function(time) {</span>
-<span class="cstat-no" title="statement not covered" >	if (!(time instanceof CronTime)) <span class="cstat-no" title="statement not covered" >throw new Error('\'time\' must be an instance of CronTime.');</span></span>
-<span class="cstat-no" title="statement not covered" >	this.stop();</span>
-<span class="cstat-no" title="statement not covered" >	this.cronTime = time;</span>
+CronJob.prototype.setTime = <span class="fstat-no" title="function not covered">function(time) {</span>
+<span class="cstat-no" title="statement not covered">	if (!(time instanceof CronTime)) <span class="cstat-no" title="statement not covered">throw new Error('\'time\' must be an instance of CronTime.');</span></span>
+<span class="cstat-no" title="statement not covered">	this.stop();</span>
+<span class="cstat-no" title="statement not covered">	this.cronTime = time;</span>
 }
 &nbsp;
-CronJob.prototype.nextDate = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >	return this.cronTime.sendAt();</span>
+CronJob.prototype.nextDate = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">	return this.cronTime.sendAt();</span>
 }
 &nbsp;
-var fireOnTick = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >	for (var i = (this._callbacks.length - 1); i &gt;= 0; i--)</span>
-<span class="cstat-no" title="statement not covered" >		this._callbacks[i].call(this.context, this.onComplete);</span>
+var fireOnTick = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">	for (var i = (this._callbacks.length - 1); i &gt;= 0; i--)</span>
+<span class="cstat-no" title="statement not covered">		this._callbacks[i].call(this.context, this.onComplete);</span>
 }
 CronJob.prototype.fireOnTick = fireOnTick;
 &nbsp;
-CronJob.prototype.nextDates = <span class="fstat-no" title="function not covered" >function(i) {</span>
-<span class="cstat-no" title="statement not covered" >	return this.cronTime.sendAt(i);</span>
+CronJob.prototype.nextDates = <span class="fstat-no" title="function not covered">function(i) {</span>
+<span class="cstat-no" title="statement not covered">	return this.cronTime.sendAt(i);</span>
 }
 &nbsp;
-var start = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >	if (this.running) <span class="cstat-no" title="statement not covered" >return;</span></span>
+var start = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">	if (this.running) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var MAXDELAY = 2147483647; </span>// The maximum number of milliseconds setTimeout will wait.
-<span class="cstat-no" title="statement not covered" >	var self = this;</span>
-<span class="cstat-no" title="statement not covered" >	var timeout = this.cronTime.getTimeout();</span>
-<span class="cstat-no" title="statement not covered" >	var remaining = 0;</span>
-<span class="cstat-no" title="statement not covered" >	var startTime;</span>
+<span class="cstat-no" title="statement not covered">	var MAXDELAY = 2147483647; </span>// The maximum number of milliseconds setTimeout will wait.
+<span class="cstat-no" title="statement not covered">	var self = this;</span>
+<span class="cstat-no" title="statement not covered">	var timeout = this.cronTime.getTimeout();</span>
+<span class="cstat-no" title="statement not covered">	var remaining = 0;</span>
+<span class="cstat-no" title="statement not covered">	var startTime;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (this.cronTime.realDate) <span class="cstat-no" title="statement not covered" >this.runOnce = true;</span></span>
+<span class="cstat-no" title="statement not covered">	if (this.cronTime.realDate) <span class="cstat-no" title="statement not covered">this.runOnce = true;</span></span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function _setTimeout(timeout) {</span>
-<span class="cstat-no" title="statement not covered" >		startTime = Date.now();</span>
-<span class="cstat-no" title="statement not covered" >		self._timeout = setTimeout(callbackWrapper, timeout);</span>
+<span class="fstat-no" title="function not covered">	function _setTimeout(timeout) {</span>
+<span class="cstat-no" title="statement not covered">		startTime = Date.now();</span>
+<span class="cstat-no" title="statement not covered">		self._timeout = setTimeout(callbackWrapper, timeout);</span>
 	}
 &nbsp;
 	// The callback wrapper checks if it needs to sleep another period or not
 	// and does the real callback logic when it's time.
 &nbsp;
-<span class="fstat-no" title="function not covered" >	function callbackWrapper() {</span>
-<span class="cstat-no" title="statement not covered" >		var diff = startTime + timeout - Date.now();</span>
+<span class="fstat-no" title="function not covered">	function callbackWrapper() {</span>
+<span class="cstat-no" title="statement not covered">		var diff = startTime + timeout - Date.now();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (diff &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >			var newTimeout = self.cronTime.getTimeout();</span>
+<span class="cstat-no" title="statement not covered">		if (diff &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">			var newTimeout = self.cronTime.getTimeout();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (newTimeout &gt; diff) {</span>
-<span class="cstat-no" title="statement not covered" >				newTimeout = diff;</span>
+<span class="cstat-no" title="statement not covered">			if (newTimeout &gt; diff) {</span>
+<span class="cstat-no" title="statement not covered">				newTimeout = diff;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			remaining += newTimeout;</span>
+<span class="cstat-no" title="statement not covered">			remaining += newTimeout;</span>
 		}
 &nbsp;
 		// If there is sleep time remaining, calculate how long and go to sleep
@@ -1756,78 +1754,78 @@ var start = <span class="fstat-no" title="function not covered" >function() {</s
 		// times the number of sleep sessions. Given a MAXDELAY of almost a
 		// month, this should be no issue.
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		self.lastExecution = new Date();</span>
-<span class="cstat-no" title="statement not covered" >		if (remaining) {</span>
-<span class="cstat-no" title="statement not covered" >			if (remaining &gt; MAXDELAY) {</span>
-<span class="cstat-no" title="statement not covered" >				remaining -= MAXDELAY;</span>
-<span class="cstat-no" title="statement not covered" >				timeout = MAXDELAY;</span>
+<span class="cstat-no" title="statement not covered">		self.lastExecution = new Date();</span>
+<span class="cstat-no" title="statement not covered">		if (remaining) {</span>
+<span class="cstat-no" title="statement not covered">			if (remaining &gt; MAXDELAY) {</span>
+<span class="cstat-no" title="statement not covered">				remaining -= MAXDELAY;</span>
+<span class="cstat-no" title="statement not covered">				timeout = MAXDELAY;</span>
 			} else {
-<span class="cstat-no" title="statement not covered" >				timeout = remaining;</span>
-<span class="cstat-no" title="statement not covered" >				remaining = 0;</span>
+<span class="cstat-no" title="statement not covered">				timeout = remaining;</span>
+<span class="cstat-no" title="statement not covered">				remaining = 0;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			_setTimeout(timeout);</span>
+<span class="cstat-no" title="statement not covered">			_setTimeout(timeout);</span>
 		} else {
 &nbsp;
 			// We have arrived at the correct point in time.
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			self.running = false;</span>
+<span class="cstat-no" title="statement not covered">			self.running = false;</span>
 &nbsp;
 			//start before calling back so the callbacks have the ability to stop the cron job
-<span class="cstat-no" title="statement not covered" >			if (!(self.runOnce)) <span class="cstat-no" title="statement not covered" >self.start();</span></span>
+<span class="cstat-no" title="statement not covered">			if (!(self.runOnce)) <span class="cstat-no" title="statement not covered">self.start();</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			self.fireOnTick();</span>
+<span class="cstat-no" title="statement not covered">			self.fireOnTick();</span>
 			//for (var i = (self._callbacks.length - 1); i &gt;= 0; i--)
 				//self._callbacks[i].call(self.context, self.onComplete);
 		}
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (timeout &gt;= 0) {</span>
-<span class="cstat-no" title="statement not covered" >		this.running = true;</span>
+<span class="cstat-no" title="statement not covered">	if (timeout &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered">		this.running = true;</span>
 &nbsp;
 		// Don't try to sleep more than MAXDELAY ms at a time.
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (timeout &gt; MAXDELAY) {</span>
-<span class="cstat-no" title="statement not covered" >			remaining = timeout - MAXDELAY;</span>
-<span class="cstat-no" title="statement not covered" >			timeout = MAXDELAY;</span>
+<span class="cstat-no" title="statement not covered">		if (timeout &gt; MAXDELAY) {</span>
+<span class="cstat-no" title="statement not covered">			remaining = timeout - MAXDELAY;</span>
+<span class="cstat-no" title="statement not covered">			timeout = MAXDELAY;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		_setTimeout(timeout);</span>
+<span class="cstat-no" title="statement not covered">		_setTimeout(timeout);</span>
 	} else {
-<span class="cstat-no" title="statement not covered" >		this.stop();</span>
+<span class="cstat-no" title="statement not covered">		this.stop();</span>
 	}
 }
 &nbsp;
 CronJob.prototype.start = start;
 &nbsp;
-CronJob.prototype.lastDate = <span class="fstat-no" title="function not covered" >function(){</span>
-<span class="cstat-no" title="statement not covered" >	return this.lastExecution;</span>
+CronJob.prototype.lastDate = <span class="fstat-no" title="function not covered">function(){</span>
+<span class="cstat-no" title="statement not covered">	return this.lastExecution;</span>
 };
 &nbsp;
 /**
  * Stop the cronjob.
  */
-CronJob.prototype.stop = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >	if (this._timeout)</span>
-<span class="cstat-no" title="statement not covered" >		clearTimeout(this._timeout);</span>
-<span class="cstat-no" title="statement not covered" >	this.running = false;</span>
-<span class="cstat-no" title="statement not covered" >	if (typeof this.onComplete == 'function') <span class="cstat-no" title="statement not covered" >this.onComplete();</span></span>
+CronJob.prototype.stop = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">	if (this._timeout)</span>
+<span class="cstat-no" title="statement not covered">		clearTimeout(this._timeout);</span>
+<span class="cstat-no" title="statement not covered">	this.running = false;</span>
+<span class="cstat-no" title="statement not covered">	if (typeof this.onComplete == 'function') <span class="cstat-no" title="statement not covered">this.onComplete();</span></span>
 }
 &nbsp;
-exports.job = <span class="fstat-no" title="function not covered" >function(cronTime, onTick, onComplete) {</span>
-<span class="cstat-no" title="statement not covered" >	return new CronJob(cronTime, onTick, onComplete);</span>
+exports.job = <span class="fstat-no" title="function not covered">function(cronTime, onTick, onComplete) {</span>
+<span class="cstat-no" title="statement not covered">	return new CronJob(cronTime, onTick, onComplete);</span>
 }
 &nbsp;
-exports.time = <span class="fstat-no" title="function not covered" >function(cronTime, timeZone) {</span>
-<span class="cstat-no" title="statement not covered" >	return new CronTime(cronTime, timeZone);</span>
+exports.time = <span class="fstat-no" title="function not covered">function(cronTime, timeZone) {</span>
+<span class="cstat-no" title="statement not covered">	return new CronTime(cronTime, timeZone);</span>
 }
 &nbsp;
-exports.sendAt = <span class="fstat-no" title="function not covered" >function(cronTime) {</span>
-<span class="cstat-no" title="statement not covered" >	return exports.time(cronTime).sendAt();</span>
+exports.sendAt = <span class="fstat-no" title="function not covered">function(cronTime) {</span>
+<span class="cstat-no" title="statement not covered">	return exports.time(cronTime).sendAt();</span>
 }
 &nbsp;
-exports.timeout = <span class="fstat-no" title="function not covered" >function(cronTime) {</span>
-<span class="cstat-no" title="statement not covered" >	return exports.time(cronTime).getTimeout();</span>
+exports.timeout = <span class="fstat-no" title="function not covered">function(cronTime) {</span>
+<span class="cstat-no" title="statement not covered">	return exports.time(cronTime).getTimeout();</span>
 }
 &nbsp;
 exports.CronJob = CronJob;
@@ -1838,10 +1836,11 @@ return exports;
 }));
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:25:13 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 01:26:21 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
